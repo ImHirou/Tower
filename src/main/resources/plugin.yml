@@ -1,0 +1,6 @@
+name: Tower
+version: '${version}'
+main: me.secretlovers.tower.Main
+api-version: '1.16'
+commands:
+  start:
