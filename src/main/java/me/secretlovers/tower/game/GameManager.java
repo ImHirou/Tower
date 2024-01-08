@@ -73,7 +73,7 @@ public class GameManager {
                 processFight();
                 break;
             case FINISH:
-                processFinal();
+                processFinish();
                 break;
         }
 
@@ -103,8 +103,8 @@ public class GameManager {
         BukkitTask prepare = new PrepareRunnable(main).runTaskTimer(main,20L, 20L);
     }
 
-    private void processFinal() {
-
+    private void processFinish() {
+        main.setGameManager(new GameManager(main));
     }
 
     private void giveKitToBoss(Boss boss) {

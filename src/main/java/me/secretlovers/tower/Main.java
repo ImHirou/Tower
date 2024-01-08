@@ -84,4 +84,8 @@ public final class Main extends JavaPlugin {
     public KitConfig getKitConfig() {
         return kitConfig;
     }
+
+    public void setGameManager(GameManager gameManager) {
+        this.gameManager = gameManager;
+    }
 }

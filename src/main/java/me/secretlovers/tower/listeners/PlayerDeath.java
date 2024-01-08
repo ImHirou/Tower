@@ -20,6 +20,7 @@ public class PlayerDeath implements Listener {
         Player player = event.getEntity();
         if(player.equals(main.getGameManager().getBoss())) {
             BukkitTask endFightTask = new EndFightRunnable(main).runTaskTimer(main, 20L, 20L);
+            main.getArenaManager().teleportBossToFloor(main.getGameManager());
         }
         else if(main.getGameManager().getPlayers().contains(player)) {
             main.getGameManager().getPlayers().remove(player);
